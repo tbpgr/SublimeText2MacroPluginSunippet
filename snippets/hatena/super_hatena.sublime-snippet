@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+>|${1:language}|
+${2:paste_source}
+||<
+]]></content>
+  <tabTrigger>hasu</tabTrigger>
+</snippet>

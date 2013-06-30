@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+<%= ${1:ruby_script} %>
+]]></content>
+  <tabTrigger>scw</tabTrigger>
+  <scope>text.html.ruby</scope>
+  <description>erb scripitlet use print</description>
+</snippet>

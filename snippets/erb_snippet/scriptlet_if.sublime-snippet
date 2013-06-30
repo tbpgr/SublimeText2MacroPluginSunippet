@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+<% if ${1:ruby_script} %>
+  ${2:contents}
+<% end %>
+]]></content>
+  <tabTrigger>sci</tabTrigger>
+  <scope>text.html.ruby</scope>
+  <description>erb scripitlet use if-end</description>
+</snippet>
