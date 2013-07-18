@@ -7,6 +7,7 @@
 | erb| scriptlet_write.sublime-snippet| sci| if文のスクリプトレットを出力| 
 | はてなブログ| super_hatena.sublime-snippet| hasu| はてなブログのスーパーはてな記法を出力| 
 | ruby| ruby_encode_utf8.sublime-snippet| encode8| RubyのシェバングでのUTF8エンコード指定| 
+| rails| pry_breakpoint.sublime-snippet| bp| pryでRailsをデバッグする際に利用するブレイクポイント | 
 ###scriptlet.sublime-snippet
 出力
 ```erb:scriptlet.sublime-snippet
@@ -39,6 +40,10 @@ paste_source
 ###ruby_encode_utf8.sublime-snippet
 ```ruby:ruby_encode_utf8.sublime-snippet
 # encoding: utf-8
+```
+###pry_breakpoint.sublime-snippet
+```rails:pry_breakpoint.sublime-snippet
+binding.pry
 ```
 ##plugin
 | ファイル名| 内容| 
