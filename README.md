@@ -52,6 +52,7 @@ binding.pry
 | GetSystemDateCommand.py| 3形式のシステム日付を取得。年月日時分秒・年月日スラッシュ区切り・年月日区切りなしの3種| 
 | ToCamelCommand.py| 選択中の文字列をキャメルケースに変換| 
 | ToSnakeCommand.py| 選択中の文字列をスネークケースに変換| 
+| TableJustifierCommand.py| テーブル構造の文字列をスペースパディングで整形| 
 ###BrowserOpenerCommand.py
 選択中の文字列を利用してブラウザを開きます。
 Google検索、Google翻訳（日英）、Google翻訳（英日）、Wikipedia検索が可能。
@@ -79,6 +80,15 @@ Google検索、Google翻訳（日英）、Google翻訳（英日）、Wikipedia�
 ```
 ###ToCamelCommand.py
 選択中の文字列をキャメルケースに変換します。先頭1文字のキャピタライズの有無を選択可能。
+
+先頭1文字のキャピタライズ指定なし
+hoge hige => hogeHige
+hoge_hige => hogeHige
+
+先頭1文字のキャピタライズ指定あり
+hoge hige => HogeHige
+hoge_hige => HogeHige
+
 キー設定例
 ```json:key-config
   { "keys": ["ctrl+shift+c"], "command": "to_camel", "args": {"capitalize": false }},
@@ -86,10 +96,36 @@ Google検索、Google翻訳（日英）、Google翻訳（英日）、Wikipedia�
 ```
 ###ToSnakeCommand.py
 選択中の文字列をスネークケースに変換します。大文字にするか小文字にするか選択可能。
+
+小文字指定時
+hoge hige => hoge_hige
+hogeHige => hoge_hige
+
+大文字指定時
+hoge hige => HOGE_HIGE
+hogeHige => HOGE_HIGE
+
 キー設定例
 ```json:key-config
   { "keys": ["ctrl+shift+o"], "command": "to_snake", "args": {"upper": false }},
   { "keys": ["ctrl+alt+shift+o"], "command": "to_snake", "args": {"upper": true }},
+``###TableJustifierCommand.py
+テーブル構造の文字列をスペースパディングで整形します。
+キー設定例
+```json:key-config
+  { "keys": ["alt+shift+j"], "command": "table_justifier", "args": {"separator": "|" }}
+```
+整形前例
+```
+    |column1|coln2|c3|
+     |v1|value2|val3|
+     |value1|v2|value3|
+```
+整形後例
+```
+      |column1|coln2 |c3    |
+      |v1     |value2|val3  |
+      |value1 |v2    |value3|
 ```
 ##macro
 | ファイル名| 内容| 
