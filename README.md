@@ -55,7 +55,9 @@ binding.pry
 | TableJustifierCommand.py| テーブル構造の文字列をスペースパディングで整形| 
 ###BrowserOpenerCommand.py
 選択中の文字列を利用してブラウザを開きます。
+
 Google検索、Google翻訳（日英）、Google翻訳（英日）、Wikipedia検索が可能。
+
 キー設定例
 ```json:key-config
   { "keys": ["ctrl+shift+alt+g"], "command": "browser_opener", "args": {"type": "search_google"} },
@@ -64,9 +66,11 @@ Google検索、Google翻訳（日英）、Google翻訳（英日）、Wikipedia�
   { "keys": ["ctrl+shift+alt+w"], "command": "browser_opener", "args": {"type": "search_wikipedia"} },
 ```
 上記のキー設定が前提の場合、例えばtbpgというテキストを選択して、ctrl+shift+alt+gを実行すれば
+
 「tbpg」でGoogle検索した結果がブラウザに表示される
 ###GetSystemDateCommand.py| 
 システム日付文字列を取得したい場合に利用。
+
 キー設定例
 ```json:key-config
   { "keys": ["ctrl+alt+d", "1"], "command": "get_system_date", "args": {"format": "yyyy/mm/dd hh:mi:ss"} },
@@ -82,12 +86,18 @@ Google検索、Google翻訳（日英）、Google翻訳（英日）、Wikipedia�
 選択中の文字列をキャメルケースに変換します。先頭1文字のキャピタライズの有無を選択可能。
 
 先頭1文字のキャピタライズ指定なし
+
 hoge hige => hogeHige
+
 hoge_hige => hogeHige
 
+
 先頭1文字のキャピタライズ指定あり
+
 hoge hige => HogeHige
+
 hoge_hige => HogeHige
+
 
 キー設定例
 ```json:key-config
@@ -98,19 +108,27 @@ hoge_hige => HogeHige
 選択中の文字列をスネークケースに変換します。大文字にするか小文字にするか選択可能。
 
 小文字指定時
+
 hoge hige => hoge_hige
+
 hogeHige => hoge_hige
 
+
 大文字指定時
+
 hoge hige => HOGE_HIGE
+
 hogeHige => HOGE_HIGE
+
 
 キー設定例
 ```json:key-config
   { "keys": ["ctrl+shift+o"], "command": "to_snake", "args": {"upper": false }},
   { "keys": ["ctrl+alt+shift+o"], "command": "to_snake", "args": {"upper": true }},
-``###TableJustifierCommand.py
+``
+###TableJustifierCommand.py
 テーブル構造の文字列をスペースパディングで整形します。
+
 キー設定例
 ```json:key-config
   { "keys": ["alt+shift+j"], "command": "table_justifier", "args": {"separator": "|" }}
