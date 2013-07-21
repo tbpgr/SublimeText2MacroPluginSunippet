@@ -125,7 +125,8 @@ hogeHige => HOGE_HIGE
 ```json:key-config
   { "keys": ["ctrl+shift+o"], "command": "to_snake", "args": {"upper": false }},
   { "keys": ["ctrl+alt+shift+o"], "command": "to_snake", "args": {"upper": true }},
-``
+```
+
 ###TableJustifierCommand.py
 テーブル構造の文字列をスペースパディングで整形します。
 
